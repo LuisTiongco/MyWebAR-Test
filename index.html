@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
     <style>
@@ -14,53 +16,124 @@
              vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       
       <a-assets>
-        <img id="Fairy-1" src="img/Fairy/Fairy-1.png"> <img id="Fairy-2" src="img/Fairy/Fairy-2.png"> <img id="Fairy-3" src="img/Fairy/Fairy-3.png">
-        <img id="Fighting-1" src="img/Fighting/Fighting-1.png"> <img id="Fighting-2" src="img/Fighting/Fighting-2.png"> <img id="Fighting-3" src="img/Fighting/Fighting-3.png">
-        <img id="Psychic-1" src="img/Psychic/Psychic-1.png"> <img id="Psychic-2" src="img/Psychic/Psychic-2.png"> <img id="Psychic-3" src="img/Psychic/Psychic-3.png">
-        <img id="Water-1" src="img/Water/Water-1.png"> <img id="Water-2" src="img/Water/Water-2.png"> <img id="Water-3" src="img/Water/Water-3.png">
-        <img id="Grass-1" src="img/Grass/Grass-1.png"> <img id="Grass-2" src="img/Grass/Grass-2.png"> <img id="Grass-3" src="img/Grass/Grass-3.png">
-        <img id="Colorless-1" src="img/Colorless/Colorless-1.png"> <img id="Colorless-2" src="img/Colorless/Colorless-2.png"> <img id="Colorless-3" src="img/Colorless/Colorless-3.png">
-        <img id="Electric-1" src="img/Electric/Electric-1.png"> <img id="Electric-2" src="img/Electric/Electric-2.png"> <img id="Electric-3" src="img/Electric/Electric-3.png">
-        <img id="Steel-1" src="img/Steel/Steel-1.png"> <img id="Steel-2" src="img/Steel/Steel-2.png"> <img id="Steel-3" src="img/Steel/Steel-3.png">
+        <img id="Fairy-1" src="img/Fairy/Fairy-1.png" crossorigin="anonymous"> <img id="Fairy-2" src="img/Fairy/Fairy-2.png" crossorigin="anonymous">
+        <img id="Fairy-3" src="img/Fairy/Fairy-3.png" crossorigin="anonymous"> <img id="Fairy-4" src="img/Fairy/Fairy-4.png" crossorigin="anonymous">
+        <img id="Fighting-1" src="img/Fighting/Fighting-1.png" crossorigin="anonymous"> <img id="Fighting-2" src="img/Fighting/Fighting-2.png" crossorigin="anonymous">
+        <img id="Fighting-3" src="img/Fighting/Fighting-3.png" crossorigin="anonymous"> <img id="Fighting-4" src="img/Fighting/Fighting-4.png" crossorigin="anonymous">
+        <img id="Psychic-1" src="img/Psychic/Psychic-1.png" crossorigin="anonymous"> <img id="Psychic-2" src="img/Psychic/Psychic-2.png" crossorigin="anonymous">
+        <img id="Psychic-3" src="img/Psychic/Psychic-3.png" crossorigin="anonymous"> <img id="Psychic-4" src="img/Psychic/Psychic-4.png" crossorigin="anonymous">
+        <img id="Water-1" src="img/Water/Water-1.png" crossorigin="anonymous"> <img id="Water-2" src="img/Water/Water-2.png" crossorigin="anonymous">
+        <img id="Water-3" src="img/Water/Water-3.png" crossorigin="anonymous"> <img id="Water-4" src="img/Water/Water-4.png" crossorigin="anonymous">
+        <img id="Grass-1" src="img/Grass/Grass-1.png" crossorigin="anonymous"> <img id="Grass-2" src="img/Grass/Grass-2.png" crossorigin="anonymous">
+        <img id="Grass-3" src="img/Grass/Grass-3.png" crossorigin="anonymous"> <img id="Grass-4" src="img/Grass/Grass-4.png" crossorigin="anonymous">
+        <img id="Colorless-1" src="img/Colorless/Colorless-1.png" crossorigin="anonymous"> <img id="Colorless-2" src="img/Colorless/Colorless-2.png" crossorigin="anonymous">
+        <img id="Colorless-3" src="img/Colorless/Colorless-3.png" crossorigin="anonymous"> <img id="Colorless-4" src="img/Colorless/Colorless-4.png" crossorigin="anonymous">
+        <img id="Electric-1" src="img/Electric/Electric-1.png" crossorigin="anonymous"> <img id="Electric-2" src="img/Electric/Electric-2.png" crossorigin="anonymous">
+        <img id="Electric-3" src="img/Electric/Electric-3.png" crossorigin="anonymous"> <img id="Electric-4" src="img/Electric/Electric-4.png" crossorigin="anonymous">
+        <img id="Steel-1" src="img/Steel/Steel-1.png" crossorigin="anonymous"> <img id="Steel-2" src="img/Steel/Steel-2.png" crossorigin="anonymous">
+        <img id="Steel-3" src="img/Steel/Steel-3.png" crossorigin="anonymous"> <img id="Steel-4" src="img/Steel/Steel-4.png" crossorigin="anonymous">
+
+        <img id="icon-fairy" src="img/icons/fairy-icon.png" crossorigin="anonymous">
+        <img id="icon-fighting" src="img/icons/fighting-icon.png" crossorigin="anonymous">
+        <img id="icon-psychic" src="img/icons/psychic-icon.png" crossorigin="anonymous">
+        <img id="icon-water" src="img/icons/water-icon.png" crossorigin="anonymous">
+        <img id="icon-grass" src="img/icons/grass-icon.png" crossorigin="anonymous">
+        <img id="icon-colorless" src="img/icons/colorless-icon.png" crossorigin="anonymous">
+        <img id="icon-electric" src="img/icons/electric-icon.png" crossorigin="anonymous">
+        <img id="icon-steel" src="img/icons/steel-icon.png" crossorigin="anonymous">
       </a-assets>
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <a-entity mindar-image-target="targetIndex: 0"><a-image id="album-0" height="0.66" width="1"></a-image></a-entity>
-      <a-entity mindar-image-target="targetIndex: 1"><a-image id="album-1" height="0.66" width="1"></a-image></a-entity>
-      <a-entity mindar-image-target="targetIndex: 2"><a-image id="album-2" height="0.66" width="1"></a-image></a-entity>
-      <a-entity mindar-image-target="targetIndex: 3"><a-image id="album-3" height="0.66" width="1"></a-image></a-entity>
-      <a-entity mindar-image-target="targetIndex: 4"><a-image id="album-4" height="0.66" width="1"></a-image></a-entity>
-      <a-entity mindar-image-target="targetIndex: 5"><a-image id="album-5" height="0.66" width="1"></a-image></a-entity>
-      <a-entity mindar-image-target="targetIndex: 6"><a-image id="album-6" height="0.66" width="1"></a-image></a-entity>
-      <a-entity mindar-image-target="targetIndex: 7"><a-image id="album-7" height="0.66" width="1"></a-image></a-entity>
+      <a-entity mindar-image-target="targetIndex: 0" class="ar-target" data-type="fairy">
+        <a-plane height="0.7" width="1.05" material="color: #ffb3d9; transparent: true; opacity: 0.4" animation="property: material.opacity; from: 0.2; to: 0.6; dir: alternate; dur: 1000; loop: true"></a-plane>
+        <a-image id="album-0" height="0.66" width="1" position="0 0 0.01" material="shader: flat; transparent: true"></a-image>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 1" class="ar-target" data-type="fighting">
+        <a-plane height="0.7" width="1.05" material="color: #ff944d; transparent: true; opacity: 0.4" animation="property: material.opacity; from: 0.2; to: 0.6; dir: alternate; dur: 1000; loop: true"></a-plane>
+        <a-image id="album-1" height="0.66" width="1" position="0 0 0.01" material="shader: flat; transparent: true"></a-image>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 2" class="ar-target" data-type="psychic">
+        <a-plane height="0.7" width="1.05" material="color: #b366ff; transparent: true; opacity: 0.4" animation="property: material.opacity; from: 0.2; to: 0.6; dir: alternate; dur: 1000; loop: true"></a-plane>
+        <a-image id="album-2" height="0.66" width="1" position="0 0 0.01" material="shader: flat; transparent: true"></a-image>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 3" class="ar-target" data-type="water">
+        <a-plane height="0.7" width="1.05" material="color: #33ccff; transparent: true; opacity: 0.4" animation="property: material.opacity; from: 0.2; to: 0.6; dir: alternate; dur: 1000; loop: true"></a-plane>
+        <a-image id="album-3" height="0.66" width="1" position="0 0 0.01" material="shader: flat; transparent: true"></a-image>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 4" class="ar-target" data-type="grass">
+        <a-plane height="0.7" width="1.05" material="color: #70db70; transparent: true; opacity: 0.4" animation="property: material.opacity; from: 0.2; to: 0.6; dir: alternate; dur: 1000; loop: true"></a-plane>
+        <a-image id="album-4" height="0.66" width="1" position="0 0 0.01" material="shader: flat; transparent: true"></a-image>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 5" class="ar-target" data-type="colorless">
+        <a-plane height="0.7" width="1.05" material="color: #e6e6e6; transparent: true; opacity: 0.4" animation="property: material.opacity; from: 0.2; to: 0.6; dir: alternate; dur: 1000; loop: true"></a-plane>
+        <a-image id="album-5" height="0.66" width="1" position="0 0 0.01" material="shader: flat; transparent: true"></a-image>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 6" class="ar-target" data-type="electric">
+        <a-plane height="0.7" width="1.05" material="color: #ffff66; transparent: true; opacity: 0.4" animation="property: material.opacity; from: 0.2; to: 0.6; dir: alternate; dur: 1000; loop: true"></a-plane>
+        <a-image id="album-6" height="0.66" width="1" position="0 0 0.01" material="shader: flat; transparent: true"></a-image>
+      </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 7" class="ar-target" data-type="steel">
+        <a-plane height="0.7" width="1.05" material="color: #a6a6a6; transparent: true; opacity: 0.4" animation="property: material.opacity; from: 0.2; to: 0.6; dir: alternate; dur: 1000; loop: true"></a-plane>
+        <a-image id="album-7" height="0.66" width="1" position="0 0 0.01" material="shader: flat; transparent: true"></a-image>
+      </a-entity>
 
     </a-scene>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const albums = {
-          0: ["#Fairy-1", "#Fairy-2", "#Fairy-3"],
-          1: ["#Fighting-1", "#Fighting-2", "#Fighting-3"],
-          2: ["#Psychic-1", "#Psychic-2", "#Psychic-3"],
-          3: ["#Water-1", "#Water-2", "#Water-3"],
-          4: ["#Grass-1", "#Grass-2", "#Grass-3"],
-          5: ["#Colorless-1", "#Colorless-2", "#Colorless-3"],
-          6: ["#Electric-1", "#Electric-2", "#Electric-3"],
-          7: ["#Steel-1", "#Steel-2", "#Steel-3"]
+          0: ["#Fairy-1", "#Fairy-2", "#Fairy-3", "#Fairy-4"],
+          1: ["#Fighting-1", "#Fighting-2", "#Fighting-3", "#Fighting-4"],
+          2: ["#Psychic-1", "#Psychic-2", "#Psychic-3", "#Psychic-4"],
+          3: ["#Water-1", "#Water-2", "#Water-3", "#Water-4"],
+          4: ["#Grass-1", "#Grass-2", "#Grass-3", "#Grass-4"],
+          5: ["#Colorless-1", "#Colorless-2", "#Colorless-3", "#Colorless-4"],
+          6: ["#Electric-1", "#Electric-2", "#Electric-3", "#Electric-4"],
+          7: ["#Steel-1", "#Steel-2", "#Steel-3", "#Steel-4"]
         };
 
+        // --- PARTICLE BURST ---
+        const spawnBurst = (targetEl) => {
+          const type = targetEl.getAttribute('data-type');
+          const iconId = `#icon-${type}`;
+          for (let i = 0; i < 12; i++) {
+            const p = document.createElement('a-image');
+            p.setAttribute('src', iconId);
+            p.setAttribute('scale', '0.12 0.12 0.12');
+            p.setAttribute('position', '0 0 0.05');
+            const destX = (Math.random() - 0.5) * 2.5;
+            const destY = (Math.random() - 0.5) * 2.5;
+            p.setAttribute('animation__pos', `property: position; to: ${destX} ${destY} 0.6; dur: 1200; easing: easeOutQuad`);
+            p.setAttribute('animation__opac', `property: material.opacity; from: 1; to: 0; dur: 1200; easing: easeInQuad`);
+            targetEl.appendChild(p);
+            setTimeout(() => p.remove(), 1200); 
+          }
+        };
+
+        const targets = document.querySelectorAll('.ar-target');
+        targets.forEach(t => {
+          t.addEventListener("targetFound", () => spawnBurst(t));
+        });
+
+        // --- IMAGE CYCLING ---
         let currentIndex = 0;
 
-        // Set initial images
+        // Force initial image assignment
         Object.keys(albums).forEach(id => {
           const el = document.querySelector(`#album-${id}`);
           if(el) el.setAttribute("src", albums[id][0]);
         });
 
-        // 1-second interval for energetic cycling
         setInterval(() => {
-          currentIndex = (currentIndex + 1) % 3; 
+          currentIndex = (currentIndex + 1) % 4; 
           Object.keys(albums).forEach(id => {
             const el = document.querySelector(`#album-${id}`);
             if (el) el.setAttribute("src", albums[id][currentIndex]);
